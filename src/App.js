@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import IndexContainer from './containers/IndexContainer';
+import RFCContainer from './containers/RFCContainer';
 import WelcomeContainer from './containers/WelcomeContainer';
 
 function App() {
@@ -12,6 +13,9 @@ function App() {
         </Route>
         <Route exact path="/welcome">
             <WelcomeContainer />
+        </Route>
+        <Route exact path="/rfc">
+            <RFCContainer/>
         </Route>
       </Switch>
     </BrowserRouter>
