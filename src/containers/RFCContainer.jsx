@@ -11,7 +11,7 @@ export default function RFCContainer() {
       async function loadCensoredWords() {
         let words = await fetch(censoredTxt)
           .then((r) => r.text())
-          .then((text) => text.toString().replaceAll("\r\n", "-"));
+          .then((text) => text.toString().replaceAll("\r", "-").replaceAll("\n","-"));
 
         setCensored(words.split("-"))
       }
